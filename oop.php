@@ -43,15 +43,13 @@ class Member {
 
     public function borrowBook( $book ) {
         if ( $book->borrowBook() ) {
-            echo $this->name . " has borrowed '" . $book->getTitle() . "'.\n";
-        } else {
-            echo "No copies of '" . $book->getTitle() . "' are available for borrowing.\n";
+            $this->name;
+            $book->getTitle();
         }
     }
 
     public function returnBook( $book ) {
         $book->returnBook();
-        echo $this->name . " has returned '" . $book->getTitle() . "'.\n";
     }
 }
 
@@ -64,5 +62,5 @@ $member2 = new Member( "Jane Smith" );
 $member1->borrowBook( $book1 );
 $member2->borrowBook( $book2 );
 
-echo "Available Copies of '" . $book1->getTitle() . "': " . $book1->getAvailableCopies() . "\n";
-echo "Available Copies of '" . $book2->getTitle() . "': " . $book2->getAvailableCopies() . "\n";
+echo "Available Copies of '" . $book1->getTitle() . "': " . $book1->getAvailableCopies() . "<br>";
+echo "Available Copies of '" . $book2->getTitle() . "': " . $book2->getAvailableCopies();
